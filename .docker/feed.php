@@ -1,5 +1,4 @@
 <?php
-
 try{
     /* where to send the data */
     $host = getenv('HOST');
@@ -26,15 +25,6 @@ try{
         
         $vuln_json = json_encode($vuln);
         print($vuln_json."\n");
-
-        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-
-        $msg = $vuln_json;
-        $len = strlen($msg);
-
-        socket_connect($sock, $host, $port);
-        socket_sendto($sock, $msg, $len, 0, $host, $port);
-        socket_close($sock);
 
     }
 }catch(Exception $e){
