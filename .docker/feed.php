@@ -1,6 +1,7 @@
 <?php
+
 try{
-    /* where to send the data */
+    /* where to send the data - for future */
     $host = getenv('HOST');
     $port = getenv('PORT');
 
@@ -25,6 +26,16 @@ try{
         
         $vuln_json = json_encode($vuln);
         print($vuln_json."\n");
+
+        /* TBD - send data to a relay sever */
+        // $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+
+        // $msg = $vuln_json;
+        // $len = strlen($msg);
+
+        // socket_connect($sock, $host, $port);
+        // socket_sendto($sock, $msg, $len, 0, $host, $port);
+        // socket_close($sock);
 
     }
 }catch(Exception $e){
