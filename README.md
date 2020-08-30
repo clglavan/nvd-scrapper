@@ -9,7 +9,13 @@ environment
 - GOOGLE_APPLICATION_CREDENTIALS: path inside container where auth key is mounted
 
 ```dockerfile
-sudo docker run -e FILENAME="nvd-results.json" -e FORMAT="json" -e BUCKET={bucket-name} -e PROJECTID={project-id} -e GOOGLE_APPLICATION_CREDENTIALS=/google/key.json -v $(pwd):/google/ --rm nvd-scrapper
+docker run -e FILENAME="nvd-results.json" \
+-e FORMAT="json" \
+-e BUCKET={bucket-name} \
+-e PROJECTID={project-id} \
+-e GOOGLE_APPLICATION_CREDENTIALS=/google/key.json \
+-v $(pwd):/google/ \
+--rm clglavan/nvd-scrapper
 ```
 
 ### Example implementation
