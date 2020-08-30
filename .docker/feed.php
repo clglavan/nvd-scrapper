@@ -1,14 +1,22 @@
 <?php
+require 'vendor/autoload.php';
+
+use Google\Cloud\Storage\StorageClient;
 
 try{
-    /* where to send the data - for future */
-    $host = getenv('HOST');
-    $port = getenv('PORT');
+    $bucket = getenv('BUCKET');
+    $projectId = getenv('PROJECTID');
 
     $raw_data = file_get_contents('https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml');
 
     $xml = simplexml_load_string($raw_data);
     unset($xml->channel);
+
+    if($bucket){
+        $filename =  'results.json';
+        
+        $fp = fopen($filename, 'w');
+    }
 
     foreach ($xml as $item){
 
@@ -27,17 +35,27 @@ try{
         $vuln_json = json_encode($vuln);
         print($vuln_json."\n");
 
-        /* TBD - send data to a relay sever */
-        // $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-
-        // $msg = $vuln_json;
-        // $len = strlen($msg);
-
-        // socket_connect($sock, $host, $port);
-        // socket_sendto($sock, $msg, $len, 0, $host, $port);
-        // socket_close($sock);
+        if($bucket){
+            fwrite($fp, json_encode($vuln_json));
+        }
 
     }
+
+    if($bucket){
+        fclose($fp);
+        $config = [
+            'projectId' => $projectId,
+            'overwrite' => true,
+        ];
+        $storage = new StorageClient($config);
+        $bucketObj = $storage->bucket($bucket);
+
+        // Upload results to the bucket.
+        $bucketObj->upload(
+            fopen($filename, 'r')
+        );
+    }
+
 }catch(Exception $e){
     echo $e;
 }

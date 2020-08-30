@@ -1,11 +1,14 @@
 FROM php:7.4-fpm-alpine as BASE
 
+#FROM gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
+
+ENV BUCKET=0
+ENV PROJECTID=0
+ENV GOOGLE_APPLICATION_CREDENTIALS=/key.json
+
 COPY . /
-
-ENV HOST='127.0.0.1'
-ENV PORT='514'
-
 WORKDIR /
+
 RUN chmod a+r feed.php
 
 CMD [ "php", "./feed.php" ]
