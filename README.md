@@ -19,4 +19,4 @@ docker run -e FILENAME="nvd-results.json" \
 ```
 
 ### Example implementation
-https://earthroot.github.io/nvd-scrapper/
+https://clglavan.github.io/nvd-scrapper/
