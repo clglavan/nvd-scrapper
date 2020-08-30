@@ -1,8 +1,16 @@
 # nvd-scrapper
 Pull data from the national vulnerability database and push it to a GCP bucket
 
-Bucket is optional, you can leave out ENV vars regarding bucket, and just pull the data from container stdout
+environment
+- FORMAT: "json" or "csv"
+- BUCKET: name of gcp bucket ( if empty bucket upload is ignored, and vars below)
+- PROJECTID: get from gcp
+- FILENAME: name of the file uploaded to bucket
+- GOOGLE_APPLICATION_CREDENTIALS: path inside container where auth key is mounted
 
-`sudo docker run -e BUCKET={gcp_bucket_name} -e PROJECTID={gcp_project_id} -e GOOGLE_APPLICATION_CREDENTIALS={gcp_service_acc_creds} -v $(pwd):/google/ --rm nvd-scrapper`
+```dockerfile
+sudo docker run -e FILENAME="nvd-results.json" -e FORMAT="json" -e BUCKET={bucket-name} -e PROJECTID={project-id} -e GOOGLE_APPLICATION_CREDENTIALS=/google/key.json -v $(pwd):/google/ --rm nvd-scrapper
+```
 
+### Example implementation
 https://earthroot.github.io/nvd-scrapper/

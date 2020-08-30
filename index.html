@@ -3,12 +3,41 @@
 <head>
 <title>vulns-ossp</title>
 <meta charset="utf-8"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>Work in progress</h1>
-    <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;www.draw.io\&quot; modified=\&quot;2020-08-30T13:24:29.041Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36\&quot; etag=\&quot;1dyNvejgNVNvQ3WzqYEy\&quot; version=\&quot;13.6.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;vX5sMPs5rB2u8DaZvb36\&quot; name=\&quot;Page-1\&quot;&gt;1VnbcqM4EP0aP8aFwOD4McSxd6qS2exmai77siVABk0EYoSI8X79SCCuihOy8ZhdJ5WiW0JuTp8+tJSZdR0XWwbT6I4GiMxMIyhm1npmmmBhmjP5awSHyrM07coRMhyoSa3jAf+DlNNQ3hwHKOtN5JQSjtO+06dJgnze80HG6L4/bUdJ/1tTGCLN8eBDonu/4IBHldc2jNb/G8JhxAcDMaznKkcWwYDuOy7rZmZdM0p5dRUX14hI7GpYqvs2R0abuBhK+JgbbrMw/vDpbvvn38V++5e3y7d37oVa5QmSXD3vx8/ir7GGHHowQyp0fqjhYDRPAiSXBDPL3UeYo4cU+nJ0LwggfBGPiRpWiyPGUXE0atBgITiEaIw4O4gp6gbLUvAp+tTmvs0FqBGOOnlwlA+q9IfNyi1E4kKh9AbEbA0SFAjCKJMyHtGQJpDctF63Bc0QVjvnltJUQfUdcX5Q7Ic5p30gUYH51871N7nU3FbWulArl8ZBGVWcMriXoRfPQnPmoxeeWZUwhyxE/IV5i+dTyRCBHD/14zh5YkyNylvMo9wTviufY5pkk5MZ9LkM7GfIbJyTzM6UZG4J/K3L32fJLABmh69do1MC0mxvK61fUASLkUVwhALnKQIApszoW+Tpf5TR1ZQZXWiyljwFF5kv9ClFTMu26DJSeZky6qMse13WPOg/hiUDfs85wQk6odytRujdWV/eYNK3d1/wwMjyaCuiKhDgvFIhpXWPGBaYCYacvGxWY4XQnLJuVlrd6LXCGX1E15RQVjqsoPwItJpeXSapmlY3/6DHCGlBL6Mk5+iK+YoCpbexzBN1wkt7UE2X47qHxeJXVZOhYezm/qMgxRDpAGZRU0Fqpwa9ctTo18oOE9LJyNKWP00S6pGESp1ya7GLi1BuPuehn5pzrwrBcgW0XK1KoIfIPc2w7AOFj1XouDIhWOz1bgfjMQ6CsvYhwaF0ELTrzr9S7mZeJvQVJ+FtOW0tA97RhNd0GM2At7x+FA2kPgxpYJk6C2rf6OpT33hPsYiuYWGfgxfA6S9Ad7tM5b/LrCbsd5DtclrpBstet/padyOMoQQ3kg4m63jA2J0cWE7axep7OReHf+RIrd0lwXHtsMHlYmMd045hKXPJCE0ofAGxTOBRpfAo5zTuKEVzh5KETyXTLpyBJIDaVk9S2534V+XnmMxFqPjgyxDclFUXaw+HP1qM3veyWZm9QjeXeuvmOLrK2Je1HJ1+f29ouf+P9m6nLNjl2IKddJNSh9k9fKE0FCmojhIfeB5gquXv3OcvwwMY01nNTf31eeY9yXOdqkNkuwFlDAztSq/zI5dHxQISLo++r+S3mhskmpxIHiLPw/K0ay5h3vS3iJv2ZnEV/vtFSLXEBtbLTJ5RYPcbkoWh61RzZvzOdAqzPa2v2pr2Xx7WzU8=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-    <script type="text/javascript" src="https://www.draw.io/js/viewer-static.min.js"></script>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Vulns - Open Source Scrapper Project - National Vulnerability Database</h1>
+            <h5>Work in progress</h5>
+            <h3>This POC ilustrates how to centralize CVE information and use a serverless arhitecture to display relevant dashboards</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li>
+                    Launch a container in a serverless environment like github actions and send data to a gcp bucket
+                </li>
+                <li>
+                    Pull data from gcp into BigQuery dataset
+                </li>
+                <li>
+                    Create a datastudio report with BigQuery dataset as data source
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;www.draw.io\&quot; modified=\&quot;2020-08-30T13:24:29.041Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36\&quot; etag=\&quot;1dyNvejgNVNvQ3WzqYEy\&quot; version=\&quot;13.6.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;vX5sMPs5rB2u8DaZvb36\&quot; name=\&quot;Page-1\&quot;&gt;1VnbcqM4EP0aP8aFwOD4McSxd6qS2exmai77siVABk0EYoSI8X79SCCuihOy8ZhdJ5WiW0JuTp8+tJSZdR0XWwbT6I4GiMxMIyhm1npmmmBhmjP5awSHyrM07coRMhyoSa3jAf+DlNNQ3hwHKOtN5JQSjtO+06dJgnze80HG6L4/bUdJ/1tTGCLN8eBDonu/4IBHldc2jNb/G8JhxAcDMaznKkcWwYDuOy7rZmZdM0p5dRUX14hI7GpYqvs2R0abuBhK+JgbbrMw/vDpbvvn38V++5e3y7d37oVa5QmSXD3vx8/ir7GGHHowQyp0fqjhYDRPAiSXBDPL3UeYo4cU+nJ0LwggfBGPiRpWiyPGUXE0atBgITiEaIw4O4gp6gbLUvAp+tTmvs0FqBGOOnlwlA+q9IfNyi1E4kKh9AbEbA0SFAjCKJMyHtGQJpDctF63Bc0QVjvnltJUQfUdcX5Q7Ic5p30gUYH51871N7nU3FbWulArl8ZBGVWcMriXoRfPQnPmoxeeWZUwhyxE/IV5i+dTyRCBHD/14zh5YkyNylvMo9wTviufY5pkk5MZ9LkM7GfIbJyTzM6UZG4J/K3L32fJLABmh69do1MC0mxvK61fUASLkUVwhALnKQIApszoW+Tpf5TR1ZQZXWiyljwFF5kv9ClFTMu26DJSeZky6qMse13WPOg/hiUDfs85wQk6odytRujdWV/eYNK3d1/wwMjyaCuiKhDgvFIhpXWPGBaYCYacvGxWY4XQnLJuVlrd6LXCGX1E15RQVjqsoPwItJpeXSapmlY3/6DHCGlBL6Mk5+iK+YoCpbexzBN1wkt7UE2X47qHxeJXVZOhYezm/qMgxRDpAGZRU0Fqpwa9ctTo18oOE9LJyNKWP00S6pGESp1ya7GLi1BuPuehn5pzrwrBcgW0XK1KoIfIPc2w7AOFj1XouDIhWOz1bgfjMQ6CsvYhwaF0ELTrzr9S7mZeJvQVJ+FtOW0tA97RhNd0GM2At7x+FA2kPgxpYJk6C2rf6OpT33hPsYiuYWGfgxfA6S9Ad7tM5b/LrCbsd5DtclrpBstet/padyOMoQQ3kg4m63jA2J0cWE7axep7OReHf+RIrd0lwXHtsMHlYmMd045hKXPJCE0ofAGxTOBRpfAo5zTuKEVzh5KETyXTLpyBJIDaVk9S2534V+XnmMxFqPjgyxDclFUXaw+HP1qM3veyWZm9QjeXeuvmOLrK2Je1HJ1+f29ouf+P9m6nLNjl2IKddJNSh9k9fKE0FCmojhIfeB5gquXv3OcvwwMY01nNTf31eeY9yXOdqkNkuwFlDAztSq/zI5dHxQISLo++r+S3mhskmpxIHiLPw/K0ay5h3vS3iJv2ZnEV/vtFSLXEBtbLTJ5RYPcbkoWh61RzZvzOdAqzPa2v2pr2Xx7WzU8=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+            <script type="text/javascript" src="https://www.draw.io/js/viewer-static.min.js"></script>
+        </div>
+    </div>
 
     <iframe width="1900" height="1200" src="https://datastudio.google.com/embed/reporting/41b955e6-a58d-46c8-88c1-bad0feb5b9bf/page/L3tdB" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
