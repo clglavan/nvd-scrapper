@@ -44,8 +44,7 @@ try{
     if($bucket){
         fclose($fp);
         $config = [
-            'projectId' => $projectId,
-            'overwrite' => true,
+            'projectId' => $projectId
         ];
         $storage = new StorageClient($config);
         $bucketObj = $storage->bucket($bucket);
