@@ -20,7 +20,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: copy service account key to path
-        run: echo $GCPKEY > /google/key.json
+        run: |
+          mkdir /google
+          echo $GCPKEY > /google/key.json
         env: # Or as an environment variable
           GCPKEY: ${{ secrets.GCPKEY }}
       
