@@ -21,15 +21,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: copy service account key to path
         run: |
-          mkdir /google
-          echo $GCPKEY > /google/key.json
+          mkdir /tmp/google
+          echo $GCPKEY > /tmp/google/key.json
         env: # Or as an environment variable
           GCPKEY: ${{ secrets.GCPKEY }}
       
       - name: set environment variables
         run: php .docker/feed.php
         env: 
-          GOOGLE_APPLICATION_CREDENTIALS: "/google/key.json"
+          GOOGLE_APPLICATION_CREDENTIALS: "/tmp/google/key.json"
           PROJECTID: ${{ secrets.PROJECTID }}
           BUCKET: ${{ secrets.BUCKET }}
           FORMAT: ${{ secrets.FORMAT }}
