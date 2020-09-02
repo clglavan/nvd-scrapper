@@ -20,3 +20,5 @@ docker run -e FILENAME="nvd-results.json" \
 
 ### Example implementation
 https://clglavan.github.io/nvd-scrapper/
+
+![CI](https://github.com/clglavan/vulns-ossp/workflows/CI/badge.svg)
