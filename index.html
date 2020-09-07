@@ -15,42 +15,64 @@
 </script>
 </head>
 <body>
-    <div class="container">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=1124684630894343&autoLogAppEvents=1" nonce="YniZtPu6"></script>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h1>Vulns - Open Source Scrapper Project - National Vulnerability Database</h1>
                 
                 </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <h5>Work in progress <a href="https://github.com/clglavan/nvd-scrapper" target="_blank">https://github.com/clglavan/nvd-scrapper</a></h5>
-                <h3>This POC ilustrates how to centralize CVE information and use a serverless arhitecture to display relevant dashboards</h3>
-                <ul>
-                    <li>
-                        Launch a container (<a href="https://hub.docker.com/r/clglavan/nvd-scrapper" target="_blank">https://hub.docker.com/r/clglavan/nvd-scrapper</a>) and send data to a gcp bucket
-                    </li>
-                    <li>
-                        Pull data from the gcp bucket into a BigQuery dataset (<a href="https://hub.docker.com/r/clglavan/bigquery-job" target="_blank">https://hub.docker.com/r/clglavan/bigquery-job</a>)
-                    </li>
-                    <li>
-                        Create a datastudio report with BigQuery dataset as data source
-                    </li>
-                    <li>
-                        Automate everything in a serverless environment like github actions or gitlab ci/cd 
-                    </li>
-                    <li>
-                      <a href="https://medium.com/@clglavan/free-serverless-automated-security-dashboards-d828c9768873?source=friends_link&sk=892a839619e684f3e1ac41f5543540ae">Check out this docker-compose example</a>
-                    </li>
-                </ul>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="fb-post" data-href="https://www.facebook.com/ExWareLabs/posts/3421452221251961" data-show-text="true" data-width="350"><blockquote cite="https://www.facebook.com/ExWareLabs/posts/3421452221251961" class="fb-xfbml-parse-ignore"><p>Vulns(Open Source Scrapper Project) - Serverless National CVE Vulnerability Database dashboards https://clglavan.github.io/nvd-scrapper/</p>Posted by <a href="https://www.facebook.com/ExWareLabs/">ExploitWareLabs</a> on&nbsp;<a href="https://www.facebook.com/ExWareLabs/posts/3421452221251961">Sunday, September 6, 2020</a></blockquote></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="fb-post" data-href="https://www.facebook.com/wanderlustshutterbugtechnophile/posts/1619253028235837" data-show-text="true" data-width="350"><blockquote cite="https://www.facebook.com/wanderlustshutterbugtechnophile/posts/1619253028235837" class="fb-xfbml-parse-ignore"><p>Serverless CVE dashboards
+                        https://clglavan.github.io/nvd-scrapper/</p>Posted by <a href="https://www.facebook.com/wanderlustshutterbugtechnophile/">WST</a> on&nbsp;<a href="https://www.facebook.com/wanderlustshutterbugtechnophile/posts/1619253028235837">Saturday, September 5, 2020</a></blockquote></div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
-                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;www.draw.io\&quot; modified=\&quot;2020-09-03T07:06:42.403Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36\&quot; etag=\&quot;_EDE3l4w_z7F3xidsWFZ\&quot; version=\&quot;13.6.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;vX5sMPs5rB2u8DaZvb36\&quot; name=\&quot;Page-1\&quot;&gt;5Vltc6I6FP41ftQBglI++lK9O9Nuu7c7d1++7ASIkG0kbAhV99dvAuEloNatbXXm2o7DOTmE8JwnT05iD0xXmwWDSXRLA0R6lhFsemDWsyzTtqye/DeCbeFxhsoRMhyooNrxgH8j5TSUN8MBSrVATinhONGdPo1j5HPNBxmjaz1sSYn+1ASGqON48CHper/ggEeFd2gYtf8fhMOItxpWsIxVjjSCAV03XOC6B6aMUl5crTZTRCR2JSzFffM9rdW4GIr5MTfcpOHqw+fbxb8/NuvFd2+ZLW4nfdXLEySZet+P/4lvYwY59GCK1ND5toSD0SwOkOzS7IHJOsIcPSTQl61rQQDhi/iKqObuEMvnIcbRpuFSQ14gukKcbUWIagVAwbfVabGuc2GWCEeNPIyUD6r0h1XPNUTiQqH0F4gNO5CgQBBGmZTxiIY0huS69k5q0Axh1TE3lCYKqp+I861iP8w41YFEG8y/Nq6/ya4GQ2XNNqrn3NgqYy/4Kc2Yjw68opqgHLIQ8QNxdhEn3/9gKhkikOMnfUKdkhjn9/Tuk/t9OpqD9G7248vtGHzsu//LxOyEwjxXYg6NuqExC8yjzBO+sc8xjdOzq4zZEhmwQ2WM91SZ0TnJXBP4W5O/O8ksMGfbr02jMQWkWd+WW6dPAvtIdbqsSWCa58zo38jT5WbUvaiM2h1Zi5+CfuoLfUoQ62RblH+JvEwY9VGaPi9rHvQfw5wBdxknOEavKHduS+/OXlW5HTC7AHJGH9GUEspyBwjyj0CkqqwlPEVYWaqb2iySFvRSSjKOxsxX0yb3Vpb1SnWrM2xBfHXckmLbb6VARgfjSeY/ihnXRjqAaVSpjtpXQS9vNXSOLjEhjYw4Q/lXJaFsiakk76ScAatNKLeKg9BPrIFXDAFMBNpc9Uqgh8g9TbEsDoSPFehMJPpY7MxuWu0rHAS5XkKCQ+kgaNmMHyt3FZeKSYfj8CYPm8kBL2nMSzrsZsBB2j5PC0UDKaNtGgCry4LSd7SUqSfeUywGXLFQ52DfHOkd0OUyVflvMqsa9suL8asLql8GV/bhBU8Y94hh8c6ItRdB870WQfPYXZfpvPYymN86ZgxuGwGJZFK6n1o2ABq5LNdtEano8aW0OghSU8Nw+ClDSh+bhNsvU0Pzyp6DfTLVVg0u2dfRJF8kWLJlryh5lHO6aohSdYdSn885q0Wlr6uPWdrqTUq7MX43/+xT1AhtPvhyCJOEFRczD4e/aoxOWtdsQy8dxCI2cLqaNhp1NW14VYrf628xjU76z6Y35kGxOUEgnGMF4rLq5HLczf0/paFIQXHM+MCzANNO/t77CKB9BmCN3IHVJfb7lsXmrrp4RGRxA+UYGFrm3tGvTB4jC0i4PBYfy6dac5+EBD7BeBDm5y0DifJc36TM63vFVfjiPkjRwxyWvZw9n+ZQL34q4Wok0wJvlMydNRE4p0bpJwDWsUcAKrIsgKpq6JTy59CR5eWeAewctXM5KXWOTqnpaDl9vqjNrXaF/PapLou9C8l196eysqzq/6RehwgXfd7jvt15jzDr3zSLur/+YRhc/wE=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-                <script type="text/javascript" src="https://www.draw.io/js/viewer-static.min.js"></script>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Work in progress <a href="https://github.com/clglavan/nvd-scrapper" target="_blank">https://github.com/clglavan/nvd-scrapper</a></h5>
+                        <h3>This POC ilustrates how to centralize CVE information and use a serverless arhitecture to display relevant dashboards</h3>
+                        <ul>
+                            <li>
+                                Launch a container (<a href="https://hub.docker.com/r/clglavan/nvd-scrapper" target="_blank">https://hub.docker.com/r/clglavan/nvd-scrapper</a>) and send data to a gcp bucket
+                            </li>
+                            <li>
+                                Pull data from the gcp bucket into a BigQuery dataset (<a href="https://hub.docker.com/r/clglavan/bigquery-job" target="_blank">https://hub.docker.com/r/clglavan/bigquery-job</a>)
+                            </li>
+                            <li>
+                                Create a datastudio report with BigQuery dataset as data source
+                            </li>
+                            <li>
+                                Automate everything in a serverless environment like github actions or gitlab ci/cd 
+                            </li>
+                            <li>
+                            <a href="https://medium.com/@clglavan/free-serverless-automated-security-dashboards-d828c9768873?source=friends_link&sk=892a839619e684f3e1ac41f5543540ae">Check out this docker-compose example</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;www.draw.io\&quot; modified=\&quot;2020-09-03T07:06:42.403Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36\&quot; etag=\&quot;_EDE3l4w_z7F3xidsWFZ\&quot; version=\&quot;13.6.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;vX5sMPs5rB2u8DaZvb36\&quot; name=\&quot;Page-1\&quot;&gt;5Vltc6I6FP41ftQBglI++lK9O9Nuu7c7d1++7ASIkG0kbAhV99dvAuEloNatbXXm2o7DOTmE8JwnT05iD0xXmwWDSXRLA0R6lhFsemDWsyzTtqye/DeCbeFxhsoRMhyooNrxgH8j5TSUN8MBSrVATinhONGdPo1j5HPNBxmjaz1sSYn+1ASGqON48CHper/ggEeFd2gYtf8fhMOItxpWsIxVjjSCAV03XOC6B6aMUl5crTZTRCR2JSzFffM9rdW4GIr5MTfcpOHqw+fbxb8/NuvFd2+ZLW4nfdXLEySZet+P/4lvYwY59GCK1ND5toSD0SwOkOzS7IHJOsIcPSTQl61rQQDhi/iKqObuEMvnIcbRpuFSQ14gukKcbUWIagVAwbfVabGuc2GWCEeNPIyUD6r0h1XPNUTiQqH0F4gNO5CgQBBGmZTxiIY0huS69k5q0Axh1TE3lCYKqp+I861iP8w41YFEG8y/Nq6/ya4GQ2XNNqrn3NgqYy/4Kc2Yjw68opqgHLIQ8QNxdhEn3/9gKhkikOMnfUKdkhjn9/Tuk/t9OpqD9G7248vtGHzsu//LxOyEwjxXYg6NuqExC8yjzBO+sc8xjdOzq4zZEhmwQ2WM91SZ0TnJXBP4W5O/O8ksMGfbr02jMQWkWd+WW6dPAvtIdbqsSWCa58zo38jT5WbUvaiM2h1Zi5+CfuoLfUoQ62RblH+JvEwY9VGaPi9rHvQfw5wBdxknOEavKHduS+/OXlW5HTC7AHJGH9GUEspyBwjyj0CkqqwlPEVYWaqb2iySFvRSSjKOxsxX0yb3Vpb1SnWrM2xBfHXckmLbb6VARgfjSeY/ihnXRjqAaVSpjtpXQS9vNXSOLjEhjYw4Q/lXJaFsiakk76ScAatNKLeKg9BPrIFXDAFMBNpc9Uqgh8g9TbEsDoSPFehMJPpY7MxuWu0rHAS5XkKCQ+kgaNmMHyt3FZeKSYfj8CYPm8kBL2nMSzrsZsBB2j5PC0UDKaNtGgCry4LSd7SUqSfeUywGXLFQ52DfHOkd0OUyVflvMqsa9suL8asLql8GV/bhBU8Y94hh8c6ItRdB870WQfPYXZfpvPYymN86ZgxuGwGJZFK6n1o2ABq5LNdtEano8aW0OghSU8Nw+ClDSh+bhNsvU0Pzyp6DfTLVVg0u2dfRJF8kWLJlryh5lHO6aohSdYdSn885q0Wlr6uPWdrqTUq7MX43/+xT1AhtPvhyCJOEFRczD4e/aoxOWtdsQy8dxCI2cLqaNhp1NW14VYrf628xjU76z6Y35kGxOUEgnGMF4rLq5HLczf0/paFIQXHM+MCzANNO/t77CKB9BmCN3IHVJfb7lsXmrrp4RGRxA+UYGFrm3tGvTB4jC0i4PBYfy6dac5+EBD7BeBDm5y0DifJc36TM63vFVfjiPkjRwxyWvZw9n+ZQL34q4Wok0wJvlMydNRE4p0bpJwDWsUcAKrIsgKpq6JTy59CR5eWeAewctXM5KXWOTqnpaDl9vqjNrXaF/PapLou9C8l196eysqzq/6RehwgXfd7jvt15jzDr3zSLur/+YRhc/wE=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                        <script type="text/javascript" src="https://www.draw.io/js/viewer-static.min.js"></script>
+                    </div>
+                </div>
             </div>
+            <div class="col-md-3">
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">nvd-scrapper - Pull data from the NVD and push it to a GCP bucket to create nice-looking dashboard for listing CVEs<a href="https://t.co/JSQ8EIdovJ">https://t.co/JSQ8EIdovJ</a> <a href="https://t.co/1KojZfqXdb">pic.twitter.com/1KojZfqXdb</a></p>&mdash; Catalin Cimpanu (@campuscodi) <a href="https://twitter.com/campuscodi/status/1302543311526268930?ref_src=twsrc%5Etfw">September 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            
         </div>
-    
-    </div>
+   
     
     <iframe width="1900" height="1200" src="https://datastudio.google.com/embed/reporting/41b955e6-a58d-46c8-88c1-bad0feb5b9bf/page/L3tdB" frameborder="0" style="border:0" allowfullscreen></iframe>
 
