@@ -4,6 +4,7 @@
 <title>vulns-ossp</title>
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63820421-15"></script>
 <script>
@@ -12,7 +13,24 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-63820421-15');
+
+
+
+  $(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
 </script>
+
 </head>
 <body>
     <div id="fb-root"></div>
@@ -47,9 +65,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                         <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;www.draw.io\&quot; modified=\&quot;2020-09-03T07:06:42.403Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36\&quot; etag=\&quot;_EDE3l4w_z7F3xidsWFZ\&quot; version=\&quot;13.6.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;vX5sMPs5rB2u8DaZvb36\&quot; name=\&quot;Page-1\&quot;&gt;5Vltc6I6FP41ftQBglI++lK9O9Nuu7c7d1++7ASIkG0kbAhV99dvAuEloNatbXXm2o7DOTmE8JwnT05iD0xXmwWDSXRLA0R6lhFsemDWsyzTtqye/DeCbeFxhsoRMhyooNrxgH8j5TSUN8MBSrVATinhONGdPo1j5HPNBxmjaz1sSYn+1ASGqON48CHper/ggEeFd2gYtf8fhMOItxpWsIxVjjSCAV03XOC6B6aMUl5crTZTRCR2JSzFffM9rdW4GIr5MTfcpOHqw+fbxb8/NuvFd2+ZLW4nfdXLEySZet+P/4lvYwY59GCK1ND5toSD0SwOkOzS7IHJOsIcPSTQl61rQQDhi/iKqObuEMvnIcbRpuFSQ14gukKcbUWIagVAwbfVabGuc2GWCEeNPIyUD6r0h1XPNUTiQqH0F4gNO5CgQBBGmZTxiIY0huS69k5q0Axh1TE3lCYKqp+I861iP8w41YFEG8y/Nq6/ya4GQ2XNNqrn3NgqYy/4Kc2Yjw68opqgHLIQ8QNxdhEn3/9gKhkikOMnfUKdkhjn9/Tuk/t9OpqD9G7248vtGHzsu//LxOyEwjxXYg6NuqExC8yjzBO+sc8xjdOzq4zZEhmwQ2WM91SZ0TnJXBP4W5O/O8ksMGfbr02jMQWkWd+WW6dPAvtIdbqsSWCa58zo38jT5WbUvaiM2h1Zi5+CfuoLfUoQ62RblH+JvEwY9VGaPi9rHvQfw5wBdxknOEavKHduS+/OXlW5HTC7AHJGH9GUEspyBwjyj0CkqqwlPEVYWaqb2iySFvRSSjKOxsxX0yb3Vpb1SnWrM2xBfHXckmLbb6VARgfjSeY/ihnXRjqAaVSpjtpXQS9vNXSOLjEhjYw4Q/lXJaFsiakk76ScAatNKLeKg9BPrIFXDAFMBNpc9Uqgh8g9TbEsDoSPFehMJPpY7MxuWu0rHAS5XkKCQ+kgaNmMHyt3FZeKSYfj8CYPm8kBL2nMSzrsZsBB2j5PC0UDKaNtGgCry4LSd7SUqSfeUywGXLFQ52DfHOkd0OUyVflvMqsa9suL8asLql8GV/bhBU8Y94hh8c6ItRdB870WQfPYXZfpvPYymN86ZgxuGwGJZFK6n1o2ABq5LNdtEano8aW0OghSU8Nw+ClDSh+bhNsvU0Pzyp6DfTLVVg0u2dfRJF8kWLJlryh5lHO6aohSdYdSn885q0Wlr6uPWdrqTUq7MX43/+xT1AhtPvhyCJOEFRczD4e/aoxOWtdsQy8dxCI2cLqaNhp1NW14VYrf628xjU76z6Y35kGxOUEgnGMF4rLq5HLczf0/paFIQXHM+MCzANNO/t77CKB9BmCN3IHVJfb7lsXmrrp4RGRxA+UYGFrm3tGvTB4jC0i4PBYfy6dac5+EBD7BeBDm5y0DifJc36TM63vFVfjiPkjRwxyWvZw9n+ZQL34q4Wok0wJvlMydNRE4p0bpJwDWsUcAKrIsgKpq6JTy59CR5eWeAewctXM5KXWOTqnpaDl9vqjNrXaF/PapLou9C8l196eysqzq/6RehwgXfd7jvt15jzDr3zSLur/+YRhc/wE=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
                         <script type="text/javascript" src="https://www.draw.io/js/viewer-static.min.js"></script>
+
+                        <a class="d-none d-lg-block d-xl-block  ct-btn-scroll ct-js-btn-scroll " href="#dashboard"><img width="80" alt="Arrow Down Icon" src="https://icons-for-free.com/iconfiles/png/512/arrows+double+arrow+doublechevrondown+down+icon-1320185729599209775.png"></a>
                     </div>
                 </div>
             </div>
@@ -74,10 +94,12 @@
             
             
         </div>
-   
-    
-    <iframe width="1900" height="1200" src="https://datastudio.google.com/embed/reporting/41b955e6-a58d-46c8-88c1-bad0feb5b9bf/page/L3tdB" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+ 
+       
+            
+    <section id="dashboard">
+        <iframe width="1900" height="1200" src="https://datastudio.google.com/embed/reporting/41b955e6-a58d-46c8-88c1-bad0feb5b9bf/page/L3tdB" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

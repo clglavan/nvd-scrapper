@@ -1,0 +1,14 @@
+.separator-type, .title-type, .intro-type, .content-type .intro-type p {
+    position: relative;
+  }
+  .intro-type .container {
+    padding: 107px 0px 102px 0px !important;
+  }
+  .company-heading h1 {
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+    line-height: 80px;
+    color: #fff;
+    font-weight: 700 !important;
+    text-align: center;
+  }
